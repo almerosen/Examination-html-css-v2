@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Frank+Ruhl+Libre&family=Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +9,7 @@
 body {
     width: 100vw;
     height: 100vh;
+    font-family: 'roboto', sans-serif;
 }
 
 /******************************/
@@ -15,24 +18,12 @@ h3 {
     margin: 1rem 0;
 }
 
-.wrapper {
-    /*max-width: 1000px;*/
-    border: 1px solid black;
-    padding: 0 4rem 4rem 4rem;
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas:
-    "services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header"
-    "evening evening evening adventure adventure adventure travel travel travel party party party"
-    "featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header"
-    "presidential presidential presidential presidential family family family family double-room double-room double-room double-room";
-}
 
 /************ NAV-BAR *************/
 
 .nav-bar {
-    grid-area: navbar;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 60px;
     /*position: fixed;
@@ -73,14 +64,13 @@ h3 {
 /****************************/
 
 .main-container {
-    grid-area: main;
+    margin-top: 60px;
     width: 100%;
     position: relative;
 }
 
 .main-container__logo {
     width: 100%;
-    /*object-fit: contain;*/
     object-fit: cover;
 }
 
@@ -110,6 +100,21 @@ h3 {
     align-items: center;
 }
 
+/************************************/
+
+.wrapper {
+    /*max-width: 1000px;*/
+    padding: 0 4rem 4rem 4rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+    "services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header"
+    "evening evening evening adventure adventure adventure travel travel travel party party party"
+    "featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header"
+    "presidential presidential presidential presidential family family family family double-room double-room double-room double-room";
+}
+
 /************** SERVICES **************/
 
 .services-header {
@@ -120,7 +125,6 @@ h3 {
 }
 
 .services-activities {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,6 +148,10 @@ h3 {
     grid-area: party;
 }
 
+.services-text {
+    line-height: 1.4rem;
+}
+
 /********** FEATURED ROOMS ***************/
 
 .featured-header {
@@ -158,7 +166,6 @@ h3 {
     height: 12rem;
     text-align: center;
     box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.70);
-    border: 1px solid black;
     /*display: flex;
     flex-direction: column;*/
 }
@@ -208,7 +215,7 @@ h3 {
 
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .wrapper {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
