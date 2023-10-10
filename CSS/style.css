@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/******************************/
+
+h3 {
+    margin: 1rem 0;
+}
+
+.wrapper {
+    /*max-width: 1000px;*/
+    border: 1px solid black;
+    padding: 0 4rem 4rem 4rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+    "services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header"
+    "evening evening evening adventure adventure adventure travel travel travel party party party"
+    "featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header"
+    "presidential presidential presidential presidential family family family family double-room double-room double-room double-room";
+}
+
+/************ NAV-BAR *************/
+
+.nav-bar {
+    grid-area: navbar;
+    width: 100%;
+    height: 60px;
+    /*position: fixed;
+    top: 0;
+    left: 0;*/
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar__img-container {
+    height: 70%;
+    width: 10%;
+    overflow: hidden;
+    margin-left: 2rem;
+}
+
+.nav-bar-logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    margin-right: 2rem;
+    color: black;
+}
+
+/****************************/
+
+.main-container {
+    grid-area: main;
+    width: 100%;
+    position: relative;
+}
+
+.main-container__logo {
+    width: 100%;
+    /*object-fit: contain;*/
+    object-fit: cover;
+}
+
+.main-container__info {
+    width: 30rem;
+    height: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.main-container__link {
+    width: 10rem;
+    height: 2rem;
+    background-color: #4f7dec;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/************** SERVICES **************/
+
+.services-header {
+    grid-area: services-header;
+    width: 100%;
+    text-align: center;
+    margin: 4rem 0 1rem 0;
+}
+
+.services-activities {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.services-evening {
+    grid-area: evening;
+}
+
+.services-adventure {
+    grid-area: adventure;
+}
+
+.services-travel {
+    grid-area: travel;
+}
+
+.services-party {
+    grid-area: party;
+}
+
+/********** FEATURED ROOMS ***************/
+
+.featured-header {
+    grid-area: featured-header;
+    margin: 4rem 0 1rem 0;
+    text-align: center;
+}
+
+.featured-rooms {
+    place-self: center;
+    width: 20rem;
+    height: 12rem;
+    text-align: center;
+    box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.70);
+    border: 1px solid black;
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+.featured-rooms__img-container {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid black;
+}
+
+.img-presidential {
+    background-image: url("../IMG/photos/03-day.jpg");
+    width: 100%;
+    background-size: cover;
+}
+
+.img-family {
+    background-image: url("../IMG/photos/05-day.jpg");
+    width: 100%;
+    background-size: cover;
+}
+
+.img-double {
+    background-image: url("../IMG/photos/06-day.jpg");
+    width: 100%;
+    background-size: cover;
+}
+
+.featured-rooms__text {
+    margin-top: 0.3rem;
+    font-weight: 700;
+}
+
+.featured-presidential {
+    grid-area: presidential;
+}
+
+.featured-family {
+    grid-area: family;
+}
+
+.featured-double {
+    grid-area: double-room;
+}
+
+/***************************************/
+
+
+
+@media screen and (max-width: 750px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "services-header services-header"
+        "evening adventure"
+        "travel party"
+        "featured-header featured-header"
+        "presidential family"
+        "double-room double-room";
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "services-header"
+        "evening"
+        "adventure"
+        "travel"
+        "party"
+        "featured-header"
+        "presidential"
+        "family"
+        "double-room";
+    }
+    
+}
+
+
+
+
+
