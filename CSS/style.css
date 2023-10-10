@@ -115,12 +115,12 @@ h3 {
     padding: 0 4rem 4rem 4rem;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
-    "services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header services-header"
-    "evening evening evening adventure adventure adventure travel travel travel party party party"
-    "featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header featured-header"
-    "presidential presidential presidential presidential family family family family double-room double-room double-room double-room";
+    "services-header services-header services-header services-header services-header services-header "
+    "services services services services services services"
+    "featured-header featured-header featured-header featured-header featured-header featured-header"
+    "presidential presidential family family double-room double-room";
 }
 
 /************** SERVICES **************/
@@ -132,15 +132,24 @@ h3 {
     margin: 4rem 0 1rem 0;
 }
 
+/********************/
+
+.services-grid {
+    grid-area: services;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
 .services-activities {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 1rem;
 }
 
-.services-evening {
+/*.services-evening {
     grid-area: evening;
 }
 
@@ -154,7 +163,7 @@ h3 {
 
 .services-party {
     grid-area: party;
-}
+}*/
 
 .services-text {
     line-height: 1.4rem;
@@ -174,8 +183,7 @@ h3 {
     height: 12rem;
     text-align: center;
     box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.70);
-    /*display: flex;
-    flex-direction: column;*/
+    
 }
 
 .featured-rooms__img-container {
@@ -251,12 +259,14 @@ h3 {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         "services-header services-header"
-        "evening adventure"
-        "travel party"
+        "services services"
         "featured-header featured-header"
         "presidential family"
         "double-room double-room";
     } 
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
@@ -267,14 +277,14 @@ h3 {
         grid-template-columns: 1fr;
         grid-template-areas: 
         "services-header"
-        "evening"
-        "adventure"
-        "travel"
-        "party"
+        "services"
         "featured-header"
         "presidential"
         "family"
         "double-room";
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
     }
     .gallery {
         grid-template-columns: 1fr;
