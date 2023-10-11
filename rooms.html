@@ -40,7 +40,6 @@
             <label for="room-droplist">Room type</label>
             <select name="room-type-droplist" id="room-type-droplist">
                 <option value="All">All</option>
-
                 <option value="Presidential">Presidential</option>
                 <option value="Family deluxe">Family deluxe</option>
                 <option value="Double deluxe">Double deluxe</option>
@@ -55,6 +54,16 @@
                 <option value="4">4</option>
             </select>
         </div>
+
+        <div class="slider-container">
+            <div class="slider">
+                <p class="slider__text">Room price</p>
+                <p id="rangeValue" class="slider__text">500</p>
+                
+                <input type="range" min="0" max="1000" value="500" oninput="rangeValue.innerText = this.value" class="slider--style">
+            </div> 
+        </div>
+        
 
         
 

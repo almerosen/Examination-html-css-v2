@@ -255,9 +255,20 @@ h3 {
     width: 150px;
 }
 
+.guests {
+    display: flex;
+    flex-direction: column;
+}
+
 #guests-droplist {
     width: 150px;
 }
+
+.slider--style {
+    width: 150px;
+}
+
+.slider__text {}
 
 
 /**************** GALLERY ****************/
