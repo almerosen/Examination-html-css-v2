@@ -30,7 +30,10 @@
         </div>
     </main>
 
-    <section class="our-rooms-header">
+
+<div class="wrapper-rooms">
+
+<section class="our-rooms-header">
         <h2>Search rooms</h2>
     </section>
 
@@ -63,10 +66,12 @@
                 <input type="range" min="0" max="1000" value="500" oninput="rangeValue.innerText = this.value" class="slider--style">
             </div> 
         </div>
-        
 
+        <div class="form-container">
+            <label for="firstname">Room size: </label>
+                <input type="text" name="room size" required>
+        </div>
         
-
     </div>
 
     <div class="gallery">
@@ -115,6 +120,9 @@
         
 
     </div>
+</div>
+
+    
     
 </body>
 </html>
