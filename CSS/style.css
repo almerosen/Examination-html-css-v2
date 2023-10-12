@@ -185,6 +185,11 @@ header {
     width: 100%;
 }
 
+.featured-rooms__link {
+    text-decoration: none;
+    color: black;
+}
+
 .featured-rooms-gallery__text {
     text-align: center;
 }
