@@ -29,6 +29,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     width: 100%;
     height: 80px;
     background-color: rgb(126, 186, 181);
@@ -54,6 +55,10 @@ header {
     color: black;
 }
 
+.navbar ul :hover {
+    text-decoration: underline;
+}
+
 /****************************/
 
 .main-container {
@@ -64,8 +69,9 @@ header {
 
 .main-container__logo {
     width: 100%;
-    height: 650px;
+    height: 600px;
     object-fit: cover;
+    object-position: bottom;
 }
 
 .main-container__info {
@@ -96,6 +102,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.main-container__link:hover {
+    font-size: 1.05rem;
 }
 
 /************************************/
@@ -197,7 +207,7 @@ header {
     grid-area: room-header;
     width: 100%;
     text-align: center;
-    margin: 4rem 0;
+    margin: 5rem 0 2rem 0;
 }
 
 .search-room-container {
@@ -256,11 +266,82 @@ header {
     object-fit: contain;
 }
 
+.gallery__item__link {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.gallery__item__link:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
 .gallery__title {
     text-align: center;
 } 
 
+/***************************************************/
+/***************************************************/
 
+
+/***************** PRESIDENTIAL ROOM ***************/
+
+.wrapper-presidential {
+    padding: 80px 4rem 4rem 4rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+    "presidential-gallery presidential-gallery presidential-gallery presidential-gallery presidential-info presidential-info";
+}
+
+.presidential-gallery {
+    grid-area: presidential-gallery;
+    padding-top: 4rem;
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 1fr;
+}
+
+.presidential-gallery__img {
+    width: 100%;
+}
+
+.presidential-info {
+    grid-area: presidential-info;
+}
+
+.presidential-info__sticky-container {
+    padding-top: 4rem;
+    position: sticky;
+    top: 80px;
+    right: 0;
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.presidential-info__title {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.presidential-info__text {
+    color: rgba(0,0,0,0.75);
+    line-height: 1.4rem;
+    margin-bottom: auto;
+}
+
+.presidential-info__book-link {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
 
 @media screen and (max-width: 800px) {
     .wrapper {
@@ -276,6 +357,13 @@ header {
     }
     .gallery {
         grid-template-columns: 1fr 1fr;
+    }
+    .wrapper-presidential {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "presidential-gallery"
+        "presidential-info"
+        ;
     }
 }
 
