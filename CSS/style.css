@@ -89,8 +89,12 @@ header {
     gap: 1rem;
 }
 
-.main-container__info__text {
+/*.main-container__info__text {
     color: rgba(255, 255, 255, 0.8);
+}*/
+
+.main-container__title {
+   margin-bottom: 1rem;
 }
 
 .main-container__link {
@@ -154,7 +158,7 @@ header {
 }
 
 .services__text {
-    line-height: 1.4rem;
+    line-height: 1.5rem;
     padding: 1rem;
 }
 
@@ -329,19 +333,30 @@ header {
 
 .presidential-info__text {
     color: rgba(0,0,0,0.75);
-    line-height: 1.4rem;
-    margin-bottom: auto;
+    line-height: 1.5rem;
 }
 
 .presidential-info__book-link {
     background-color: black;
     color: white;
     text-decoration: none;
-    padding: 1rem 0;
+    padding: .8rem 0;
     display: block;
     width: 100%;
     text-align: center;
+    margin-top: auto;
 }
+
+.presidential-info__back-link {
+    display: block;
+    border: .5px solid black;
+    margin-top: .5rem;
+    text-align: center;
+    padding: .5rem;
+    text-decoration: none;
+    color: black;
+}
+
 
 @media screen and (max-width: 800px) {
     .wrapper {
@@ -365,6 +380,8 @@ header {
         "presidential-info"
         ;
     }
+    .presidential-info__book-link {
+        margin-top: 4rem;
 }
 
 @media screen and (max-width: 500px) {
