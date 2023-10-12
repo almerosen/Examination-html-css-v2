@@ -18,9 +18,7 @@ h1 {
     color: white;
 }
 
-h3 {
-    margin: 1rem 0;
-}
+
 
 
 /************ NAV-BAR *************/
@@ -41,7 +39,7 @@ header {
 
 .header__logo {
    height: 30px;
-   margin-left: 4rem;
+   margin-left: 2rem;
 }
 
 .navbar ul {
@@ -51,7 +49,7 @@ header {
 
 .navbar__link {
     text-decoration: none;
-    margin-right: 4rem;
+    margin-right: 2rem;
     color: black;
 }
 
@@ -62,7 +60,7 @@ header {
 /****************************/
 
 .main-container {
-    margin-top: 80px;
+    margin-top: 5rem;
     width: 100%;
     position: relative;
 }
@@ -116,7 +114,7 @@ header {
 
 .wrapper {
     /*max-width: 1000px;*/
-    padding: 0 4rem 4rem 4rem;
+    padding: 0 2rem 4rem 2rem;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(6, 1fr);
@@ -157,9 +155,15 @@ header {
     margin: 1rem 0;
 }
 
-.services__text {
+.services-grid__item__title {
+    margin-top: 1rem;
+    letter-spacing: .1rem;
+}
+
+.services-grid__item__text {
     line-height: 1.5rem;
     padding: 1rem;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 /********** FEATURED ROOMS ***************/
@@ -202,7 +206,7 @@ header {
 /******************** ROOMS - PAGE *********************/
 
 .wrapper-rooms {
-    padding: 0 4rem 4rem 4rem;
+    padding: 0 2rem 4rem 2rem;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(6, 1fr);
@@ -261,13 +265,18 @@ header {
 .gallery {
     grid-area: gallery;
     display: grid;
-    gap: 15px;
+    gap: 2rem;
 
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 .gallery__item {
-    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    /*box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);*/
+}
+
+.gallery__item__link {
+    text-decoration: none;
+    color: black;
 }
 
 .gallery__img {
@@ -275,19 +284,16 @@ header {
     object-fit: contain;
 }
 
-.gallery__item__link {
-    text-align: center;
-    text-decoration: none;
-    color: black;
-}
-
-.gallery__item__link:hover {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-.gallery__title {
-    text-align: center;
+.gallery__item__title {
+    font-size: 1.5rem;
+    margin: 1rem 0 1.5rem 0;
 } 
+
+.gallery__text {
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 3rem;
+}
 
 /***************************************************/
 /***************************************************/
@@ -296,7 +302,7 @@ header {
 /***************** PRESIDENTIAL ROOM ***************/
 
 .wrapper-presidential {
-    padding: 80px 4rem 4rem 4rem;
+    padding: 5rem 2rem 4rem 2rem;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(6, 1fr);
@@ -306,7 +312,7 @@ header {
 
 .presidential-gallery {
     grid-area: presidential-gallery;
-    padding-top: 4rem;
+    padding-top: 2rem;
     display: grid;
     gap: .5rem;
     grid-template-columns: 1fr;
@@ -321,9 +327,9 @@ header {
 }
 
 .presidential-info__sticky-container {
-    padding-top: 4rem;
+    padding-top: 2rem;
     position: sticky;
-    top: 80px;
+    top: 5rem;
     right: 0;
     height: 77vh;
     display: flex;
@@ -375,9 +381,9 @@ header {
     .services-grid {
         grid-template-columns: 1fr 1fr;
     }
-    .gallery {
+    /*.gallery {
         grid-template-columns: 1fr 1fr;
-    }
+    }*/
     .wrapper-presidential {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -402,7 +408,7 @@ header {
         grid-template-columns: 1fr;
     }
     .gallery {
-        grid-template-columns: 1fr;
+        gap: 0;
     }
     
 }
