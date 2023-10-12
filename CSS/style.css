@@ -20,7 +20,6 @@ h1 {
 
 
 
-
 /************ NAV-BAR *************/
 
 header {
@@ -30,7 +29,8 @@ header {
     z-index: 100;
     width: 100%;
     height: 80px;
-    background-color: rgb(126, 186, 181);
+    /*background-color: rgb(126, 186, 181);*/
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -38,8 +38,14 @@ header {
 }
 
 .header__logo {
-   height: 30px;
+   height: 2rem;
    margin-left: 2rem;
+}
+
+.hotel-title {
+    text-decoration: none;
+    color: black;
+    letter-spacing: .5rem;
 }
 
 .navbar ul {
@@ -51,6 +57,7 @@ header {
     text-decoration: none;
     margin-right: 2rem;
     color: black;
+    font-size: 1rem;
 }
 
 .navbar ul :hover {
