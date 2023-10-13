@@ -188,6 +188,15 @@ header {
     line-height: 1.5rem;
 }
 
+.intro__link-container {
+    width: 15.5rem;
+    height: 3rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .intro__link {
     display: flex;
     justify-content: center;
