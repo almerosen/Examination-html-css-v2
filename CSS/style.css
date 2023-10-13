@@ -526,6 +526,10 @@ header {
 
     .intro-wrapper {
         grid-template-columns: 1fr;
+        grid-template-areas: 
+        "img1"
+        "img2"
+        "intro-info";
     }
     .services-grid {
         grid-template-columns: 1fr 1fr;
@@ -551,11 +555,13 @@ header {
 @media screen and (max-width: 500px) {
     .wrapper {
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "services-header"
-        "services"
+        grid-template-areas:
+        "intro" 
+        /*"services-header"
+        "services"*/
         "featured-header"
-        "featured-gallery";
+        "featured-gallery"
+        "room-bar";
     }
     .services-grid {
         grid-template-columns: 1fr;
