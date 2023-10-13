@@ -129,6 +129,7 @@ header {
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
     "intro intro intro intro intro intro"
+    "intro2 intro2 intro2 intro2 intro2 intro2"
     "services-header services-header services-header services-header services-header services-header "
     "services services services services services services"
     /*"featured-header featured-header featured-header featured-header featured-header featured-header"
@@ -136,7 +137,7 @@ header {
     "room-bar room-bar room-bar room-bar room-bar room-bar";
 }
 
-/*************** INTRO ****************/
+/*************** INTRO UPPER ****************/
 
 .intro-wrapper {
     grid-area: intro;
@@ -157,10 +158,18 @@ header {
 
 .intro__img1 {
     grid-area: img1;
+    display: flex;
+    align-items: end;
 }
 
 .intro__img2 {
     grid-area: img2;
+}
+
+.intro__img--1 {
+    height: 70%;
+    object-fit: cover;
+    
 }
 
 .intro__info {
@@ -196,15 +205,54 @@ header {
     font-size: 1.05rem;
 }
 
+/************** INTRO BOTTOM ***********/
+
+.intro-wrapper-2 {
+    grid-area: intro2;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    "intro2-img1 intro2-img1 intro2-img1 intro2-img2 intro2-img2"
+    "intro2-info intro2-info intro2-info intro2-info intro2-info";
+}
+
+
+.intro2__img1 {
+    grid-area: intro2-img1;
+}
+
+.intro2__img2 {
+    grid-area: intro2-img2;
+    display: flex;
+    align-items: end;
+}
+
+.intro2__info {
+    grid-area: intro2-info;
+} 
+
+.intro2__img {
+    width: 100%;
+}
+
+.intro2__img--1 {
+    height: 22rem;
+    object-fit: cover;
+}
+
+.intro2__img--2 {
+    height: 70%;
+}
 
 /************** SERVICES **************/
 
-.services-header {
+/*.services-header {
     grid-area: services-header;
     width: 100%;
     text-align: center;
-    margin: 4rem 0 1rem 0;
-}
+    margin: 2rem 0 1rem 0;
+}*/
 
 /********************/
 
@@ -212,6 +260,8 @@ header {
     grid-area: services;
     display: grid;
     gap: 1rem;
+    border: 1px solid black;
+    padding: 4rem;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -276,7 +326,7 @@ header {
     grid-area: room-bar;
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 .room-bar-section__img {
@@ -516,7 +566,8 @@ header {
     .wrapper {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "intro intro" 
+        "intro intro"
+        "intro2 intro2" 
         "services-header services-header"
         "services services"
         /*"featured-header featured-header"
@@ -531,10 +582,23 @@ header {
         "img2"
         "intro-info";
     }
+    .intro__link {
+        width: 100%;
+    }
+    .intro-wrapper-2 {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "intro2-img1"
+        "intro2-img2"
+        "intro2-info";
+    }
+    .intro2__img--2 {
+        height: 100%;
+    }    
+
     .services-grid {
         grid-template-columns: 1fr 1fr;
     }
-
     .room-bar-section {
         grid-template-columns: 1fr;
     }
@@ -556,11 +620,12 @@ header {
     .wrapper {
         grid-template-columns: 1fr;
         grid-template-areas:
-        "intro" 
-        /*"services-header"
-        "services"*/
-        "featured-header"
-        "featured-gallery"
+        "intro"
+        "intro2" 
+        "services-header"
+        "services"
+        /*"featured-header"
+        "featured-gallery"*/
         "room-bar";
     }
     .services-grid {
