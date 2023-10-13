@@ -128,12 +128,74 @@ header {
     gap: 2rem;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
+    "intro intro intro intro intro intro"
     "services-header services-header services-header services-header services-header services-header "
     "services services services services services services"
     /*"featured-header featured-header featured-header featured-header featured-header featured-header"
     "featured-gallery featured-gallery featured-gallery featured-gallery featured-gallery featured-gallery"*/
     "room-bar room-bar room-bar room-bar room-bar room-bar";
 }
+
+/*************** INTRO ****************/
+
+.intro-wrapper {
+    grid-area: intro;
+    margin-top: 3rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    "img1 img1 img2 img2 img2 "
+    "intro-info intro-info intro-info intro-info intro-info";
+}
+
+.intro__img {
+    width: 100%;
+    height: 22rem;
+    object-fit: cover;
+}
+
+.intro__img1 {
+    grid-area: img1;
+}
+
+.intro__img2 {
+    grid-area: img2;
+}
+
+.intro__info {
+    grid-area: intro-info;
+}
+
+.intro__header1 {
+    font-size: 1rem;
+}
+
+.intro__main-header {
+    margin: .5rem 0 1rem 0;
+}
+
+.intro__text {
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+.intro__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    width: 15rem;
+    height: 2.5rem;
+}
+
+.intro__link:hover {
+    font-size: 1.05rem;
+}
+
 
 /************** SERVICES **************/
 
@@ -453,13 +515,18 @@ header {
 @media screen and (max-width: 800px) {
     .wrapper {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
+        "intro intro" 
         "services-header services-header"
         "services services"
         /*"featured-header featured-header"
         "featured-gallery featured-gallery"*/
         "room-bar room-bar";
     } 
+
+    .intro-wrapper {
+        grid-template-columns: 1fr;
+    }
     .services-grid {
         grid-template-columns: 1fr 1fr;
     }
