@@ -105,7 +105,7 @@ header {
 
 .main-container__link {
     width: 10rem;
-    height: 2rem;
+    height: 2.5rem;
     background-color: rgb(0, 0, 0);
     text-decoration: none;
     color: white;
@@ -131,7 +131,8 @@ header {
     "intro intro intro intro intro intro"
     "services services services services services services"
     "intro2 intro2 intro2 intro2 intro2 intro2"
-    "room-bar room-bar room-bar room-bar room-bar room-bar";
+    "room-bar room-bar room-bar room-bar room-bar room-bar"
+    /*"footer footer footer footer footer footer"*/;
 }
 
 /*************** INTRO UPPER ****************/
@@ -204,51 +205,7 @@ header {
 
 /***************************************/
 
-
-
-/************** INTRO BOTTOM ***********/
-
-.intro-wrapper-2 {
-    grid-area: intro2;
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: 
-    "intro2-img1 intro2-img1 intro2-img1 intro2-img2 intro2-img2"
-    "intro2-info intro2-info intro2-info intro2-info intro2-info";
-}
-
-
-.intro2__img1 {
-    grid-area: intro2-img1;
-}
-
-.intro2__img2 {
-    grid-area: intro2-img2;
-    display: flex;
-    align-items: end;
-}
-
-.intro2__info {
-    grid-area: intro2-info;
-} 
-
-.intro2__img {
-    width: 100%;
-}
-
-.intro2__img--1 {
-    height: 22rem;
-    object-fit: cover;
-}
-
-.intro2__img--2 {
-    height: 70%;
-}
-
 /************** SERVICES **************/
-
-/********************/
 
 .services-grid {
     grid-area: services;
@@ -282,6 +239,47 @@ header {
     color: rgba(0, 0, 0, 0.7);
 }
 
+/***************************************/
+
+/************** INTRO BOTTOM ***********/
+
+.intro-wrapper-2 {
+    grid-area: intro2;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    "intro2-img1 intro2-img1 intro2-img1 intro2-img2 intro2-img2"
+    "intro2-info intro2-info intro2-info intro2-info intro2-info";
+}
+
+.intro2__img1 {
+    grid-area: intro2-img1;
+}
+
+.intro2__img2 {
+    grid-area: intro2-img2;
+    display: flex;
+    align-items: end;
+}
+
+.intro2__info {
+    grid-area: intro2-info;
+} 
+
+.intro2__img {
+    width: 100%;
+}
+
+.intro2__img--1 {
+    height: 22rem;
+    object-fit: cover;
+}
+
+.intro2__img--2 {
+    height: 70%;
+}
+
 /***********************************/
 
 .room-bar-section {
@@ -302,6 +300,36 @@ header {
 }
 
 .dining-nightlife__text {
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/***********************************/
+
+.line {
+    border-bottom: 1px solid black;
+}
+
+/************* FOOTER **************/
+
+footer {
+    grid-area: footer;
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.footer__adress {
+    margin-bottom: 4rem;
+}
+
+.footer__contact {
+    margin-right: 15rem;
+}
+
+.footer__text {
     line-height: 1.5rem;
     color: rgba(0, 0, 0, 0.7);
 }
