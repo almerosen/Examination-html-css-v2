@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Frank+Ruhl+Libre&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Frank+Ruhl+Libre&family=Playfair+Display&family=Roboto&display=swap');
 
 * {
     padding: 0;
@@ -9,13 +10,25 @@
 body {
     width: 100vw;
     height: 100vh;
-    font-family: 'roboto', sans-serif;
 }
 
 /******************************/
 
 h1 {
     color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+p {
+    font-family: 'roboto', sans-serif;
 }
 
 
@@ -223,7 +236,10 @@ header {
     border: 1px solid black;
     padding: 2rem;
     grid-template-columns: repeat(4, 1fr);
+    position: relative;
 }
+
+
 
 .services-grid__item {
     display: flex;
@@ -305,10 +321,11 @@ header {
 }
 
 .dining-nightlife__header {
-    margin: 1rem 0;
+    margin: 0.5rem 0 .5rem 0;
 }
 
 .dining-nightlife__text {
+    font-size: .8rem;
     line-height: 1.5rem;
     color: rgba(0, 0, 0, 0.7);
 }
@@ -339,6 +356,7 @@ footer {
 }
 
 .footer__text {
+    font-size: .8rem;
     line-height: 1.5rem;
     color: rgba(0, 0, 0, 0.7);
 }
@@ -546,8 +564,11 @@ footer {
         "img2"
         "intro-info";
     }
-    .intro__link {
+    .intro__link-container {
         width: 100%;
+    }
+    .intro__link {
+        width: 99%;
     }
     .intro-wrapper-2 {
         grid-template-columns: 1fr;
