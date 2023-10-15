@@ -40,6 +40,7 @@ header {
     top: 0;
     left: 0;
     z-index: 100;
+    max-width: 1300px;
     width: 100%;
     height: 80px;
     /*background-color: rgb(126, 186, 181);*/
@@ -82,6 +83,7 @@ header {
 
 .main-container {
     margin-top: 5rem;
+    max-width: 1300px;
     width: 100%;
     position: relative;
 }
@@ -108,10 +110,6 @@ header {
     gap: 1rem;
 }
 
-/*.main-container__info__text {
-    color: rgba(255, 255, 255, 0.8);
-}*/
-
 .main-container__title {
    margin-bottom: 1rem;
 }
@@ -135,7 +133,7 @@ header {
 /************************************/
 
 .wrapper {
-    /*max-width: 1000px;*/
+    max-width: 1300px;
     padding: 0 2rem 4rem 2rem;
     display: grid;
     gap: 3rem;
@@ -192,7 +190,7 @@ header {
 }
 
 .intro__main-header {
-    margin: .5rem 0 1rem 0;
+    margin: 0 0 1rem 0;
 }
 
 .intro__text {
@@ -238,8 +236,6 @@ header {
     grid-template-columns: repeat(4, 1fr);
     position: relative;
 }
-
-
 
 .services-grid__item {
     display: flex;
@@ -339,13 +335,14 @@ header {
 /************* FOOTER **************/
 
 footer {
+    max-width: 1300px;
+    width: 100%;
     grid-area: footer;
     margin: 2rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
-
-
 
 .footer__adress {
     margin-bottom: 4rem;
@@ -361,11 +358,11 @@ footer {
     color: rgba(0, 0, 0, 0.7);
 }
 
-
-
 /******************** ROOMS - PAGE *********************/
 
 .wrapper-rooms {
+    max-width: 1300px;
+    width: 100%;
     padding: 0 2rem 4rem 2rem;
     display: grid;
     gap: 2rem;
@@ -413,8 +410,6 @@ footer {
     width: 150px;
 }
 
-/*.slider__text {}*/
-
 .form-container {
     display: flex;
     flex-direction: column;
@@ -426,13 +421,8 @@ footer {
     grid-area: gallery;
     display: grid;
     gap: 2rem;
-
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
-
-/*.gallery__item {
-    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
-}*/
 
 .gallery__item__link {
     text-decoration: none;
@@ -462,6 +452,8 @@ footer {
 /***************** PRESIDENTIAL ROOM ***************/
 
 .wrapper-presidential {
+    max-width: 1300px;
+    width: 100%;
     padding: 5rem 2rem 4rem 2rem;
     display: grid;
     gap: 2rem;
@@ -494,7 +486,6 @@ footer {
     height: 77vh;
     display: flex;
     flex-direction: column;
-    
 }
 
 .presidential-info__title {
@@ -545,7 +536,9 @@ footer {
     font-size: .95rem;
 }
 
+/*******************************************/
 
+/************* MEDIA QUERYS ****************/
 
 @media screen and (max-width: 800px) {
     .wrapper {
@@ -587,9 +580,7 @@ footer {
     .room-bar-section {
         grid-template-columns: 1fr;
     }
-    /*.gallery {
-        grid-template-columns: 1fr 1fr;
-    }*/
+   
     .wrapper-presidential {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -598,7 +589,7 @@ footer {
         ;
     }
     .presidential-info__book-link {
-        margin-top: 4rem;
+        margin-top: 1rem;
 }
 
 @media screen and (max-width: 500px) {
