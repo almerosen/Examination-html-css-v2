@@ -344,7 +344,7 @@ footer {
     max-width: 1300px;
     width: 100%;
     grid-area: footer;
-    margin: 2rem;
+    margin: 2rem 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -356,6 +356,20 @@ footer {
 
 .footer__contact {
     margin-right: 15rem;
+}
+
+.footer__enter-email {
+    margin-top: 2rem;
+}
+.footer__button {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.footer__checkbox {
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin: .5rem 0;
+
 }
 
 .footer__text {
@@ -613,7 +627,12 @@ footer {
     .gallery {
         gap: 0;
     }
-    
+    .footer__adress {
+        margin-bottom: 1rem;
+    }
+    .footer__contact {
+        margin-bottom: 2rem;
+    }
 }
 
 
