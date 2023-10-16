@@ -57,9 +57,15 @@ header {
 }
 
 .header__hotel-title {
+    font-size: 1.4rem;
     text-decoration: none;
     color: black;
-    letter-spacing: .5rem;
+    letter-spacing: .4rem;
+    /*margin-left: 2rem;*/
+}
+
+.header__title {
+    margin-left: 2rem;
 }
 
 .navbar ul {
@@ -489,7 +495,7 @@ footer {
 }
 
 .presidential-info__title {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
